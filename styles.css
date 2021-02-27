@@ -1,0 +1,197 @@
+:root{
+    --cyan: hsl(171, 66%, 44%);
+    --ltblue: hsl(233, 100%, 69%);
+    --dkgrayblue: hsl(210, 10%, 33%);
+    --grayblue: hsl(201, 11%, 66%);
+    --ltgrayblue: hsl(201, 11%, 86%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: 'Bai Jamjuree', sans-serif;
+    padding: 0;
+    margin:0;
+    
+}
+
+body{
+    font-size: 18px;
+    background-image: url('images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    color: var(--dkgrayblue);
+}
+
+p{
+    color: var(--grayblue);
+    font-weight: 200;
+    padding: 0 2.5em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--dkgrayblue);
+}
+
+
+.main,
+.snippets,
+.access,
+.workflow,
+.clipboard,
+.links{
+    /* height: 100vh; */
+    border: 1px solid green;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+section:not(:last-of-type){
+    margin-bottom: 169px;
+}
+
+.main{
+    margin-top: 123px;
+}
+
+.marg-bot{
+    margin-bottom: 22px;
+}
+
+.mobile-image{
+    width: 90%;
+}
+
+
+.header h1{
+    margin: 0 auto 24px auto;
+    padding: 0 2em;
+}
+
+.main img{
+    width: 128px;
+    height: 128px;
+    margin-bottom: 72px;
+}
+
+.main .header{
+    margin-bottom: 50px;
+}
+
+
+.buttons{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+button{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1em; 
+}
+
+.buttons .ios,
+.buttons .mac{
+    padding: 15px 0;
+    border-radius: 30px;
+    width: 315px;
+}
+
+
+.buttons .ios{
+    background-color: var(--cyan); 
+}
+
+.buttons .mac{
+    background-color: var(--ltblue);
+}
+
+.snippets .header,
+.access .header{
+    margin-bottom: 70px;
+}
+
+.snippets img{
+    /* width: 90%; */
+    margin-bottom: 62px;
+}
+
+.snippets .snippet_container{
+
+}
+
+.snippet_container .__snipdeets:not(:last-child){
+    margin-bottom: 60px;
+}
+
+.workflow .header{
+    margin-bottom: 95px;
+}
+
+.workflow .__wfdeets:not(:last-child){
+    margin-bottom: 62px;
+}
+
+.workflow .__wfdeets:last-child{
+    margin-bottom: 134px;
+}
+
+.workflow .__wfdeets img{
+    height: 43px;
+    width: 43px;
+    margin-bottom: 51px;
+}
+
+.workflow .logos{
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+.workflow .logos img:not(:last-of-type){
+    margin-bottom: 66px;
+}
+
+.clipboard .header{
+    margin-bottom: 50px;
+}
+
+.clipboard{
+    margin-bottom: 170px;
+}
+
+.links{
+    background-color:var(--ltgrayblue);
+}
+
+.links img{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 50px auto;
+    
+}
+
+.links a{
+    margin-bottom: 38px;
+    font-weight: 600;
+}
+
+
+.links .linkscol-2,
+.links .linkscol-3,
+.links .linkscol-4{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.linkscol-5 .social img{
+    width:25px;
+    height: 25px;
+}
+
+.linkscol-5 .social:not(:last-child){
+    margin-right: 20px;
+}
