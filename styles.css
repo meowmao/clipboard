@@ -40,7 +40,6 @@ a{
 .clipboard,
 .links{
     /* height: 100vh; */
-    border: 1px solid green;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -80,7 +79,6 @@ section:not(:last-of-type){
     margin-bottom: 50px;
 }
 
-
 .buttons{
     display: flex;
     flex-flow: column wrap;
@@ -97,6 +95,7 @@ button{
     padding: 15px 0;
     border-radius: 30px;
     width: 315px;
+    box-shadow: 0 3px 5px var(--grayblue);
 }
 
 
@@ -107,6 +106,32 @@ button{
 .buttons .mac{
     background-color: var(--ltblue);
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .buttons{
+        flex-flow: row;
+    }
+
+    .buttons button:hover{
+        opacity: 75%;
+
+    }
+
+    .buttons .marg-bot{
+        margin-bottom: 0;
+    }
+
+    .buttons .ios{
+        margin-right: 16px;
+    }
+
+    .header p{
+        width: 685px;
+        margin: 0 auto;
+    }
+  
+  } 
 
 .snippets .header,
 .access .header{
@@ -124,6 +149,49 @@ button{
 
 .snippet_container .__snipdeets:not(:last-child){
     margin-bottom: 60px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .snippets{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        "header header"
+        "mobile-image snippet-container";
+        
+    }
+
+    .snippets .header{
+        grid-area: header;
+        margin-bottom: 81px;
+    }
+
+    .snippets .mobile-image{
+        transform: translateX(-50px);
+        margin-bottom: 0;
+        grid-area: mobile-image;
+    }
+
+    .snippet_container{
+        grid-area: snippet-container;
+
+        text-align: left;
+    }
+
+    .snippet_container .__snipdeets p{
+        width: 393px;
+
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .access .mobile-image{
+        width: 70%;
+    }
+
 }
 
 .workflow .header{
@@ -154,6 +222,42 @@ button{
     margin-bottom: 66px;
 }
 
+@media only screen and (min-width: 992px) {
+    .workflow{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "header"
+        "__workflow-container"
+        "logos";
+    }
+
+    .workflow .header{
+        grid-area: header;
+    }
+
+    .workflow .__workflow-container{
+        grid-area: __workflow-container;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .workflow .__wfdeets{
+        width: 335px;
+    }
+
+    .workflow .logos{
+        grid-area: logos;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .workflow .logos img:not(:last-of-type){
+        height: 47px;
+        margin-bottom: 0;
+    }
+
+}
+
 .clipboard .header{
     margin-bottom: 50px;
 }
@@ -179,19 +283,64 @@ button{
 }
 
 
-.links .linkscol-2,
-.links .linkscol-3,
-.links .linkscol-4{
+.links .linkscol{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-.linkscol-5 .social img{
-    width:25px;
-    height: 25px;
-}
 
 .linkscol-5 .social:not(:last-child){
     margin-right: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+    .links{
+        flex-flow: row;
+        justify-content: space-evenly;
+        text-align: left;
+        padding: 35px 0;
+
+    }
+    .links img{
+        margin: 0;
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .links .footer-img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .links .linkscol a:first-child{
+        margin-bottom: 30px;
+    }
+
+    .links .linkscol a:last-child{
+        margin-bottom: 0;
+    }
+
+    .linkscol a:hover,
+    .linkscol-4 a:hover{
+        color: var(--cyan);
+    }
+
+    .linkscol-4{
+        display: inherit;
+    }
+
+    .links .linkscol-5 img:hover{
+        border-radius: 50%;
+        background-color: var(--white);
+
+    }
+
+
+}
+
+footer{
+    padding: 10px;
+    background-color: white;
 }
